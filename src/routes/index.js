@@ -7,7 +7,7 @@ import { productRoute } from './productRoute.js';
 import { postRoute } from './postRoute.js';
 import { googleRoute } from './googleAuthRoute.js';
 import { facebookRoute } from './facebookAuthRoute.js';
-import { authMiddleware } from '../helpers/helperFunctions.js';
+import { authMiddleware } from '../../helperFunctions.js';
 
 const routes = Router();
 

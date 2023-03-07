@@ -1,7 +1,7 @@
 import User from '../../models/userModel.js';
 import { sendEmail } from '../../helpers/sendEmail.js';
 import { v4 as uuidv4 } from 'uuid';
-import { genPassword, issueJWT } from '../../helpers/helperFunctions.js';
+import { genPassword, issueJWT } from '../../../helperFunctions.js';
 import { validationResult } from 'express-validator';
 
 export async function registerUser(req, res, next) {
