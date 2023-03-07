@@ -20,8 +20,8 @@ app.use(function (req, res, next) {
   //  res.header("Access-Control-Allow-Origin", "*");
   const allowedOrigins = [
     'http://localhost:3000',
-    'https://portfoliomaker.onrender.com',
-    'http://portfoliomaker.onrender.com',
+    'https://bohemiankidscafe.onrender.com',
+    'http://bohemiankidscafe.onrender.com',
   ];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
