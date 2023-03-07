@@ -29,7 +29,7 @@ export async function forgotPasswordSendEmail(req, res, next) {
 
           <h1>Thanks for signing up!</h1>
           <h3>To reset your password, click link above</h2>
-          http://localhost:3000/reset-password/${passwordResetCode}
+          https://bohemiankidscafe.onrender.com/reset-password/${passwordResetCode}
       
           <br/>
           <p>Greetings,</p>

@@ -55,7 +55,7 @@ export async function registerUser(req, res, next) {
         await sendEmail({
           to: req.body.email,
           from: 'bohemiankidscoffee@gmail.com',
-          subject: 'BOHEMIAN KIDS CAFFEE - Please verify your email',
+          subject: 'BOHEMIAN KIDS CAFE - Please verify your email',
           html: `
           <div style="text-align: center; margin: 0 auto; width: 100%">
           <br/>
@@ -68,11 +68,11 @@ export async function registerUser(req, res, next) {
 
             <h1>Thanks for signing up!</h1>
             <h3>To verify your email, click link above</h2>
-            http://localhost:3000/verify-email/${user.verificationString}
+            https://bohemiankidscafe.onrender.com/verify-email/${user.verificationString}
         
             <br/>
             <p>Greetings,</p>
-            <p>Bohemian Kids Caffee</p>
+            <p>Bohemian Kids Cafe</p>
             </div>>
            
           `,
