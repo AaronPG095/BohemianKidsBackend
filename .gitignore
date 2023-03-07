@@ -1,0 +1,5 @@
+node_modules
+.env
+package-lock.json
+/src/helpers/access keys/id_rsa_priv.pem
+/src/helpers/access keys/id_rsa_pub.pem
