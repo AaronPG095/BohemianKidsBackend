@@ -68,7 +68,7 @@ export async function registerUser(req, res, next) {
 
             <h1>Thanks for signing up!</h1>
             <h3>To verify your email, click link above</h2>
-            https://bohemiankidscafe.onrender.com/verify-email/${user.verificationString}
+            https://bohemiankidscafe.onrender.com/#/verify-email/${user.verificationString}
         
             <br/>
             <p>Greetings,</p>

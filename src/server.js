@@ -11,9 +11,7 @@ const app = express();
 
 config();
 
-// MIDDLEWARE
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+
 
 app.use(function (req, res, next) {
   //  res.header("Access-Control-Allow-Origin", "*");
@@ -38,6 +36,10 @@ app.use(function (req, res, next) {
   next();
 });
 
+// MIDDLEWARE
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // app.use(
 //   cors({
 //     origin: 'http://localhost:3000', // where react app is working
@@ -45,18 +47,18 @@ app.use(function (req, res, next) {
 // );
 
 // SET UP SESSION. CODE SHOULD BE IN THIS ORDER
-app.use(
-  session({
-    secret: process.env.SECRET,
-    resave: false,
-    saveUninitialized: false,
-  })
-);
+// app.use(
+//   session({
+//     secret: process.env.SECRET,
+//     resave: false,
+//     saveUninitialized: false,
+//   })
+// );
 // INITIALIZE PASSPORT
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 
-import('./config/passportConfig.js');
+// import('./config/passportConfig.js');
 
 // ROUTES
 // Imports all of the routes from ./routes/index.js
