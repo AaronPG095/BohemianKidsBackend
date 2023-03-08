@@ -4,7 +4,7 @@ import sendgrid from '@sendgrid/mail';
 // from sendgrid account
 
 sendgrid.setApiKey(
-  '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'
+  "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"
 );
 
 /**

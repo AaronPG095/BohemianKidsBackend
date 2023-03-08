@@ -17,7 +17,6 @@ export async function forgotPasswordSendEmail(req, res, next) {
         to: email,
         from: 'bohemiankidscoffee@gmail.com',
         subject: 'Password Reset',
-
         html: ` <div style="text-align: center; margin: 0 auto; width: 100%">
         <br/>
         <img 
@@ -33,7 +32,7 @@ export async function forgotPasswordSendEmail(req, res, next) {
       
           <br/>
           <p>Greetings,</p>
-          <p>Bohemian Kids Caffee</p>
+          <p>Bohemian Kids Cafe</p>
           </div>> `,
       });
       return res.status(200).json({

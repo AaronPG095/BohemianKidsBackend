@@ -10,7 +10,6 @@ import Coffee from './models/coffeeProductModel.js';
 const app = express();
 
 config();
-console.log(process.env.SECRET);
 
 // MIDDLEWARE
 app.use(express.json());

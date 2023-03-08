@@ -7,6 +7,7 @@ import { config } from 'dotenv';
  * DB_STRING_PROD=<your production database string>
  */
 config();
+console.log(process.env.DB_STRING, 'tutaj');
 const devConnection = process.env.DB_STRING;
 const prodConnection = process.env.DB_STRING_PROD;
 

@@ -2,7 +2,7 @@ import User from '../../models/userModel.js';
 
 export const updateUser = async (req, res, next) => {
   try {
-    const { address, country, zipCode, state, city, userId, title } = req.body;
+    const { address, country, zipCode, state, city, userId, title, fName, lName } = req.body;
 
     const userToUpdate = await User.findByIdAndUpdate(
       userId,
@@ -13,6 +13,8 @@ export const updateUser = async (req, res, next) => {
         address: address,
         zipCode: zipCode,
         title: title,
+        lName: lName,
+        fName: fName
       },
       { new: true }
     );
@@ -27,6 +29,8 @@ export const updateUser = async (req, res, next) => {
         zipCode: userToUpdate.zipCode,
         country: userToUpdate.country,
         title: userToUpdate.title,
+        fname: userToUpdate.fName,
+        lName: userToUpdate.lName
       },
     });
   } catch (err) {
