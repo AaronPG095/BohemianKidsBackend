@@ -10,6 +10,7 @@ const __dirname = path.dirname(__filename);
 
 const PRIV_KEY = readFileSync(__dirname + '/id_rsa_priv.pem', 'utf8');
 const PUB_KEY = readFileSync(__dirname + '/id_rsa_pub.pem', 'utf8');
+
 /**
  * -------------- HELPER FUNCTIONS ----------------
  */
