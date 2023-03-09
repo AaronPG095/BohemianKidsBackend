@@ -52,9 +52,10 @@ export async function registerUser(req, res, next) {
       .save()
       .then(async (user) => {
         // new user need to verify email
-        await sendEmail({
+
+        sendEmail({
           to: req.body.email,
-          from: 'bohemiankidscoffee@gmail.com',
+          from: 'kamil.wawrzynczuk@gmail.com',
           subject: 'BOHEMIAN KIDS CAFE - Please verify your email',
           html: `
           <div style="text-align: center; margin: 0 auto; width: 100%">
@@ -76,7 +77,9 @@ export async function registerUser(req, res, next) {
             </div>>
            
           `,
-        });
+        })
+          .then((res) => {})
+          .catch((err) => {});
 
         const jwt = issueJWT(user);
         res.status(200).json({

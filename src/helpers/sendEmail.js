@@ -1,11 +1,11 @@
 import sendgrid from '@sendgrid/mail';
-
+import { config } from 'dotenv';
 // before using sendgrid we need to set our API key
 // from sendgrid account
 
-sendgrid.setApiKey(
-  "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"
-);
+config();
+
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 /**
  *
